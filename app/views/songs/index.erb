@@ -1,3 +1,15 @@
-<% @songs.each do |s| %>
-  <p><%= s.title %></p>
-<% end %>
+<table>
+  <thead>
+  <tr>
+     <th>All Songs</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @songs.each do |s| %>
+    <tr>
+      <td><%= s.title %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
