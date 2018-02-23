@@ -1,7 +1,7 @@
 <h1>Create Song</h1>
 <br><br>
 <%= form_for(@song) do |f| %>
-  <%= if @song.errors.any? %>
+  <% if @song.errors.any? %>
     <ul>
     <% @song.errors.full_message.each do |error| %>
       <li><%= error %></li>
