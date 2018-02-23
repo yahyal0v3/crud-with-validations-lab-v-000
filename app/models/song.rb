@@ -1,5 +1,8 @@
 class Song < ActiveRecord::Base
   validates :title, presence: true
   validates :title, uniqueness: true
-  validates :release_year, presence: true if released == true
+
+  with options if: :release_year do |song|
+    song.validates :released, presence:true
+
 end
