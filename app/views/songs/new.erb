@@ -3,7 +3,7 @@
 <%= form_for(@song) do |f| %>
   <% if @song.errors.any? %>
     <ul>
-    <% @song.errors.full_message.each do |error| %>
+    <% @song.errors.full_messages.each do |error| %>
       <li><%= error %></li>
     <% end %>
     </ul>
