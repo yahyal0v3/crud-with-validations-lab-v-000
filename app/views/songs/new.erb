@@ -1,6 +1,13 @@
 <h1>Create Song</h1>
 <br><br>
 <%= form_for(@song) do |f| %>
+  <%= if @song.errors.any? %>
+    <ul>
+    <% @song.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    </ul>
+  <% end %>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br><br>
